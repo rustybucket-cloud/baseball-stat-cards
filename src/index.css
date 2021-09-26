@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+@media only screen and (max-width: 450px) {
+  h1.navbar-brand {
+    display: none !important;
+  }
+}
