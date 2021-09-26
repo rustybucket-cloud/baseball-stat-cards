@@ -26,7 +26,7 @@ function CardsList() {
     }, [store.team])
 
     return (
-        <div>
+        <div className="row" style={{maxWidth: '1024px', margin: 'auto'}}>
             {roster.map( (i) => {
                 return <Card player={i} />
             })}
