@@ -1,5 +1,6 @@
 import Header from './components/Header';
 import CardsList from './components/CardsList';
+import { useSelector } from 'react-redux';
 
 function App() {
   return (
