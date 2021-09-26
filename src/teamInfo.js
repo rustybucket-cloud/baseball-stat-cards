@@ -13,7 +13,7 @@ const teams = [
     {
         team:'Boston Red Sox',
         color: {background: 'rgb(189, 48, 57)', letter: 'rgb(12,35,64)'},
-        logo: '	https://images.ctfassets.net/iiozhi00a8lc/t111_hea…e1b49920faed03084da22b2b7/t111_header_primary.svg'
+        logo: 'https://images.ctfassets.net/iiozhi00a8lc/t111_header_primarybos_primart_header_logo_svg/2b1d10de1b49920faed03084da22b2b7/t111_header_primary.svg'
     }
 ]
 export default teams;

@@ -3,6 +3,9 @@ const team = (state = '', action) => {
         case 'CHANGE_TEAM':
             return action.payload;
         break;
+        default:
+            return state;
+        break;
     }
 }
 
