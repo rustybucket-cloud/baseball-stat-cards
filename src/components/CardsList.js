@@ -6,10 +6,12 @@ import Card from './Card';
 function CardsList() {
     const store = useSelector(state => state);
     const [ roster, setRoster ] = useState([]);
+    const [ colors, setColors ] = useState('');
 
     useEffect(() => {
         teams.forEach((i) => {
             if (i.team === store.team) {
+                setColors(i.color);
                 fetch(`https://mlb-data.p.rapidapi.com/json/named.roster_40.bam?team_id='${i.id}'`, {
                     "method": "GET",
                     "headers": {
@@ -28,7 +30,7 @@ function CardsList() {
     return (
         <div className="row" style={{maxWidth: '1024px', margin: 'auto'}}>
             {roster.map( (i) => {
-                return <Card player={i} />
+                return <Card player={i} colors={colors}/>
             })}
         </div>
     );

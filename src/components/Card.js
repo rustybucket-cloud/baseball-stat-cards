@@ -27,11 +27,20 @@ function Card(props) {
         }
     })
 
-        return (
-            <div className="col-sm-4 col-md-3 mx-xs-auto">
-                <h3>{name}</h3>
-                <img src={photo} />
-                <p className="text-center">{position}</p>
+    const handleClick = ({currentTarget}) => {
+        currentTarget.classList.toggle('is-flipped');
+    }
+
+    return (
+            <div className="scene col-sm-4 col-md-3 mx-auto mx-xs-auto p-0">
+                <div className="card" onClick={handleClick}>
+                    <div className="card__face rsAbsoluteEl card__face--front d-flex flex-column justify-content-between align-items-center" style={{backgroundColor: `${props.colors.background}`}}>
+                        <h3>{name}</h3>
+                        <img src={photo} style={{width: '4em', height: 'auto'}}/>
+                        <p className="text-center">{position}</p>
+                    </div>
+                    <div className="card__face card__face--back " style={{backgroundColor: `${props.colors.letter}`}}><div><p>Hi,I'm here on the back</p></div></div>
+                </div>
             </div>
         );
 }
